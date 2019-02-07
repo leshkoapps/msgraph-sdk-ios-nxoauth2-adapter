@@ -120,7 +120,7 @@ typedef void (^AuthCompletion)(NSError *error);
     NSMutableArray *copiedArray = [NSMutableArray arrayWithArray:scopes];
     
     // Ensure 'offline_access' scope is specified, required for token refreshing.
-    if (![self.scopes containsObject:@"offline_access"]) {
+    if (![copiedArray containsObject:@"offline_access"]) {
         [copiedArray addObject:@"offline_access"];
     }
     
